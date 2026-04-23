@@ -4,6 +4,6 @@ Antes de comenzar, asegúrate de tener instalado:
 * [Maven](https://maven.apache.org/download.cgi) (para compilar el proyecto localmente)
 * Usa Docker Compose para iniciar el microservicio y la base de datos MySQL en segundo plano:
 * docker-compose up -d
-*Puedes comprobar que ambos contenedores estén corriendo con:
-*docker ps
-*Backend: Disponible en http://localhost:8080
+* Puedes comprobar que ambos contenedores estén corriendo con:
+* docker ps
+* Backend: Disponible en http://localhost:8080
