@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Servicio de Base de Datos para el microservicio de Citas
+  db-citas:
+    image: mysql:8.0
+    container_name: eco-mysql-citas
+    restart: always
+    environment:
+      # Configuración de seguridad inicial
+      MYSQL_ROOT_PASSWORD: admin_clinica
+      MYSQL_DATABASE: db_citas
+    ports:
+      - "3307:3306"
+    volumes:
+      # Persistencia: los datos no se borran si el contenedor se detiene
+      - mysql_data_citas:/var/lib/mysql
+    networks:
+      - ecosalud-network
+
+networks:
+  ecosalud-network:
+    driver: bridge
+
+volumes:
+  mysql_data_citas:
